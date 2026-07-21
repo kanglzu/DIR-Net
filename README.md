@@ -4,7 +4,7 @@
 
 Official implementation of **DIR-Net: A Disentangled Implicit Routing Network for Effective Time Series Forecasting**.
 
-![Model Architecture](plots/Model%20Architecture.pdf)
+![Model Architecture](plots/Model_Architecture.png)
 
 ## Highlights
 
@@ -17,7 +17,7 @@ Official implementation of **DIR-Net: A Disentangled Implicit Routing Network fo
 
 ## Architecture
 
-![DTAM vs mLSTM Comparison](plots/Comparison%20of%20DTAM%20and%20mLSTM.pdf)
+![DTAM vs mLSTM Comparison](plots/Comparison_of_DTAM_and_mLSTM.png)
 
 DIR-Net consists of four synergistic components: (1) EMA-based Decomposition, (2) Disentangled Temporal Encoder (DTE) with DTAM and DCC branches, (3) Adaptive Feature Gate Mechanism (AFGM), and (4) KAN-Based Predictor.
 
@@ -43,7 +43,7 @@ $$\mathbf{C}_t = \mathbf{f}_t \mathbf{C}_{t-1} + \mathbf{i}_t \mathbf{A}_t, \qua
 
 ## Performance Overview
 
-![Bubble Chart](plots/Bubble%20Chart.pdf)
+![Bubble Chart](plots/Bubble_Chart.png)
 
 *Figure 1: Comparison of DIR-Net and seven SOTA models across nine datasets with a fixed look-back window of 96. Each bubble denotes the average MSE, and bubble size reflects the magnitude of the metric. DIR-Net achieves the lowest parameter count (53.30K) and among the lowest FLOPs (429.78K) while attaining the best average MSE.*
 
@@ -72,13 +72,13 @@ All experiments use an input length of 96 and prediction horizons {96, 192, 336,
 | **ETTh2** | MSE | 1.065 | 3.794 | 2.361 | 3.303 | 1.275 | 3.018 | 2.717 | 1.850 | 0.383 | 0.387 | 0.386 | **0.391** |
 | | MAE | 1.208 | 1.670 | 1.298 | 1.439 | 1.109 | 1.351 | 1.361 | 1.593 | 0.405 | 0.409 | 0.409 | **0.412** |
 
-![Comparison Results](plots/Comparison%20Result.pdf)
+![Comparison Results](plots/Comparison_Result.png)
 
 *Figure 4: Average MSE and MAE of all models over nine datasets.*
 
 ### Model Efficiency (Params / FLOPs)
 
-![Params and FLOPs](plots/Params%20and%20FLOPS.pdf)
+![Params and FLOPs](plots/Params_and_FLOPS.png)
 
 *Figure 5: Comparison of model FLOPs and parameter counts.*
 
@@ -171,11 +171,11 @@ DIR_Net/
 │   ├── tools.py                # LR schedules, early stopping, visualization
 │   └── timefeatures.py         # Frequency-based time feature encoding
 ├── plots/
-│   ├── Model Architecture.pdf           # Overall architecture (Fig. 2)
-│   ├── Comparison of DTAM and mLSTM.pdf # DTAM vs mLSTM (Fig. 3)
-│   ├── Bubble Chart.pdf                 # Complexity vs performance (Fig. 1)
-│   ├── Comparison Result.pdf            # Average MSE/MAE bar charts (Fig. 4)
-│   └── Params and FLOPS.pdf             # Efficiency comparison (Fig. 5)
+│   ├── Model_Architecture.png           # Overall architecture (Fig. 2)
+│   ├── Comparison_of_DTAM_and_mLSTM.png # DTAM vs mLSTM (Fig. 3)
+│   ├── Bubble_Chart.png                 # Complexity vs performance (Fig. 1)
+│   ├── Comparison_Result.png            # Average MSE/MAE bar charts (Fig. 4)
+│   └── Params_and_FLOPS.png             # Efficiency comparison (Fig. 5)
 ├── dataset/                    # Benchmark datasets
 ├── run.py                      # Main entry point with full configuration
 ├── requirements.txt            # Python dependencies
